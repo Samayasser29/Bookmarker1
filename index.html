@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BookMarker</title>
+</head>
+<body>
+    
+<div class="container main ">
+ <div class="header text-center mt-3 mb-3">
+ <div class="mainHeader d-inline-block  mt-3 mb-3 position-relative  ">
+    <h1>Bookmarker</h1>
+</div>
+</div>   
+ <div class="section1  pe-5 ps-5 pb-3 pt-2 ">
+    <div class="main-title mt-2 mb-4">
+    <h3 class="text-center "><span class="me-2"><i class="fa fa-bookmark " ></i></span>Bookmark your favorite sites <span class=""><i class="fa fa-bookmark " ></i></span></h3>
+    </div>
+    <div class="mb-4 ">
+        <label for="siteName" class="form-label mb-2  ps-2"><span class="me-2"><i class="fa fa-book-bookmark " ></i></span> Site Name</label>
+        <input type="text" oninput="validationInput(this)"  class="form-control" id="siteName" placeholder="Bookmark Name">
+        <div class="alert alert-danger p-1 mt-1 d-none">
+            <small class="p-2">Site name is invalid , Site name must contain at least 3 characters
+            </small>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="siteUrl" class="form-label mb-2 ps-2"><span class="me-2"><i class="fa fa-chain " ></i></span>Site URL</label>
+        <input type="text" oninput="validationInput(this)" class="form-control" id="siteUrl" placeholder="Website URL">
+        <div class="alert alert-danger p-1 mt-1 d-none">
+            <small class="p-2">Url is not valid</small>
+        </div>
+      </div>
+      <div class="text-center  ">
+        <button id="submitBtn" onclick="addBookmark()" disabled type="button" class="btn btn-submit btn-lg ps-5 pe-5 mt-3 pt-2 pb-2" >Sumbit</button>
+      </div>
+
+  
+ </div>
+
+ <div class="container section2 mt-4">
+    <table class="table text-center">
+        <thead>
+          <tr>
+            <th scope="col">index</th>
+            <th scope="col">Website Name</th>
+            <th scope="col">Visit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="data">
+          
+        </tbody>
+      </table>
+     </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

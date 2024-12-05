@@ -1,0 +1,78 @@
+body{
+    background-color: #f7ecde;
+}
+.section1{
+    border: 1px dashed black;
+    border-left: 0;
+    border-right:0 ;
+}
+.mainHeader h1{
+    font-size: 50px;
+    font-family: "Pacifico";
+    color: #352e28;
+    
+   
+}
+.mainHeader h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0%;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: all 300ms;
+    z-index: -1;
+   
+}
+.main h1:hover::before{
+    height: 80%;
+}
+.main-title{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+.section1 label{
+    font-weight:bold;
+    
+}
+
+
+
+
+
+
+
+.btn-submit{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+}
+.btn-visit{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+
+}
+
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+.btn:disabled {
+    color: var( --bs-btn-color);
+    pointer-events: none;
+    background-color: var(--bs-btn-bg);
+    border-color: var( --bs-btn-border-color);
+    opacity: 0.7;
+}
